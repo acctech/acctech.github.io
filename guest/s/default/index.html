@@ -1,18 +1,43 @@
 <html>
 <head>
     <style>
-        .button {
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
+        .btn {
+            outline: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+            border-radius: .25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            padding: 1.3rem 3rem;
+            color: #fff;
+            font-family: montserrat, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #0069b4;
+            color: #222;
+            font-size: 100%;
+            line-height: 1.4;
+            font-family: montserrat, sans-serif;
+            box-sizing: inherit;
+            position: relative;
+            margin-top: 2rem;
+        }
+        span {
+            color: #222;
+            font-size: 100%;
+            line-height: 1.4;
+            font-family: montserrat, sans-serif;
+        }
     </style>
 </head>
 <body>
-<a id="connectlink" href="https://onboard.acc.edu.au" target="_system"><button>CONTINUE</button></a>
+<div><span>ACC Onboarding, please click Continue and follow the corresponding steps.</span></div>
+<button id="connectlink" class="btn" onclick="window.open('https://onboard.acc.edu.au', '_system')">CONTINUE</button>
+<javascript
 </body></html>
