@@ -27,8 +27,6 @@
             box-sizing: inherit;
             position: relative;
             margin-top: 2rem;
-            width: 50%;
-            length: 20%;
         }
         span {
             color: #222;
@@ -42,6 +40,18 @@
         #versioning {
             text-align: end;
             color: lightgrey;
+        }
+
+        @media only screen and (max-width: 1242px) {
+            body {
+                background-color: ghostwhite;
+            }
+            span {
+                color: #222;
+                font-size: 100%;
+                line-height: 1.5;
+                font-family: montserrat, sans-serif;
+            }
         }
     </style>
     <script src="detect.js">
