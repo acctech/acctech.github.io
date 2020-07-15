@@ -1,1 +1,1 @@
-b51776d footertext_align 2020-07-15
+9480c8e footertext_boostrap 2020-07-15
