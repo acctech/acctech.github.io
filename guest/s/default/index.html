@@ -45,24 +45,69 @@
             color: orange;
         }
 
-        html{
-            -webkit-text-size-adjust: none;
-        }
-
         @media only screen and (max-width: 1000px) {
-            body {
-                background-color: lightblue;
+            body{
+                background-color: lightgrey;
+                font-family:montserrat, sans-serif;
+                padding:50px;
+            }
+            span{
+                clear:both!important;
+                display:block!important;
+                width:100%!important;
+                float:none!important;
+                margin:0!important;
+                padding:0!important;
+                font-size: 3em;
+            }
+            strong{
+                font-size: 0.5em;
+            }
+            .iconlogo {
+                min-width: 5em;
+            }
+            a{
+                font-size: 3em;
+            }
+            .btn{
+                height: 5%;
+            }
+            #versioning {
+                text-align: end;
+                color: orange;
+                font-size: 0.5em;
             }
 
-            span {
-                color: #222;
-                font-size: 100%;
-                line-height: 1.5;
-                font-family: montserrat, sans-serif;
+        }
+        @media only screen and (max-width: 1366px) {
+            body{
+                background-color: whitesmoke;
+                font-family:montserrat, sans-serif;
+                padding:50px;
             }
-
-
-
+            span{
+                clear:both!important;
+                display:block!important;
+                width:100%!important;
+                float:none!important;
+                margin:0!important;
+                padding:0!important;
+                font-size: 2em;
+            }
+            strong{
+                font-size: 0.5em;
+            }
+            .iconlogo {
+                min-width: 3em;
+            }
+            a{
+                font-size: 2em;
+            }
+            #versioning {
+                text-align: end;
+                color: orange;
+                font-size: 0.5em;
+            }
 
         }
     </style>
@@ -75,7 +120,7 @@
 <div style="text-align: center; display: block; padding: 5%">
     <div style="font-size: 3em; text-align: center; display: block; padding: 5%">
         <div style="padding: 30px">
-            <img src="img/personwifi.png">
+            <img class="iconlogo" src="img/personwifi.png">
         </div>
         <span>
             <strong>ACC WiFi Onboarding</strong>
