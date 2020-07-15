@@ -28,15 +28,18 @@
             position: relative;
             margin-top: 2rem;
         }
+
         span {
             color: #222;
             font-size: 100%;
             line-height: 1.4;
             font-family: montserrat, sans-serif;
         }
+
         a {
             text-decoration: none;
         }
+
         #versioning {
             text-align: end;
             color: lightgrey;
@@ -46,19 +49,22 @@
             body {
                 background-color: lightblue;
             }
+
             span {
                 color: #222;
                 font-size: 100%;
                 line-height: 1.5;
                 font-family: montserrat, sans-serif;
             }
+
+
         }
     </style>
     <script src="detect.js">
     </script>
 </head>
 <body>
-<div id="versioning" class="text-light"></div>
+<div class="text-light" id="versioning"></div>
 
 <div style="text-align: center; display: block; padding: 5%">
     <div style="font-size: 3em; text-align: center; display: block; padding: 5%">
@@ -66,17 +72,21 @@
             <img src="img/personwifi.png">
         </div>
         <span>
-            <strong >ACC WiFi Onboarding</strong>
+            <strong>ACC WiFi Onboarding</strong>
         </span>
-        <span>
-            <div>
-                <span>Please click the Continue button below and click 'Allow'. Then follow the corresponding steps on your browser.</span>
-            </div>
-        </span>
+
+    </div>
+    <span>Please click the Continue button below and click 'Allow'. Then follow the corresponding steps on your browser.</span>
+</div>
+
 <div style="text-align: center; display: block;">
     <!-- The only importing link is the following, javascript window.open(etc etc etc) has not worked -->
-    <a id="connectlink2" href="https://cloud.securew2.com/public/69688/ACC_Test" target="_system"><button class="btn">Continue to SecureW2</button></a>
-    <a id="jamflink"  href="https://acc.jamfcloud.com/enroll" target="_system"><button class="btn">Continue to JAMF</button></a>
+    <a href="https://cloud.securew2.com/public/69688/ACC_Test" id="connectlink2" target="_system">
+        <button class="btn">Continue to SecureW2</button>
+    </a>
+    <a href="https://acc.jamfcloud.com/enroll" id="jamflink" target="_system">
+        <button class="btn">Continue to JAMF</button>
+    </a>
 </div>
 <script>
     //https://acctech.github.io/guest/s/default/index.html
@@ -84,28 +94,28 @@
     var jamfbutton = document.getElementById("jamflink");
     var securew2Button = document.getElementById("connectlink2");
 
-    if(window.ui && (window.ui.os === "Mac OS X" || window.ui.os === "iOS")){
-        // jamfbutton.hidden = false;
-        // securew2Button.hidden = true;
+    if (window.ui && (window.ui.os === "Mac OS X" || window.ui.os === "iOS")) {
+        jamfbutton.hidden = false;
+        securew2Button.hidden = true;
     } else {
-        // jamfbutton.hidden = true;
-        // securew2Button.hidden = false;
+        jamfbutton.hidden = true;
+        securew2Button.hidden = false;
     }
 
-    function loadversion(){
+    function loadversion() {
         fetch('version.txt')
             .then(response => response.text())
             .then(function (text) {
                 let versioningString = document.getElementById('versioning');
                 versioningString.textContent = text;
             })
-            .catch(function(){
+            .catch(function () {
                 console.log('Error loading versioning file');
             });
     }
 
     // Add onload functions here
-    function myOnLoadFunction(){
+    function myOnLoadFunction() {
         loadversion();
     }
 
@@ -113,7 +123,7 @@
      * Onload builtins
      */
     let oldOnload1 = window.onload;
-    window.onload=function(){
+    window.onload = function () {
         oldOnload1 && oldOnload1();
         myOnLoadFunction();
     }
